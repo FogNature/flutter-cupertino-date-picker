@@ -177,7 +177,7 @@ class DatePickerI18n {
 
     if (isFull) {
       List<String> months = i18n!.getMonths();
-      if (months != null && months.isNotEmpty) {
+      if (months.isNotEmpty) {
         return months;
       }
       return datePickerI18n[DATETIME_PICKER_LOCALE_DEFAULT]!.getMonths();
@@ -197,7 +197,7 @@ class DatePickerI18n {
         datePickerI18n[DATETIME_PICKER_LOCALE_DEFAULT];
     if (isFull) {
       List<String> weeks = i18n!.getWeeksFull();
-      if (weeks != null && weeks.isNotEmpty) {
+      if (weeks.isNotEmpty) {
         return weeks;
       }
       return datePickerI18n[DATETIME_PICKER_LOCALE_DEFAULT]!.getWeeksFull();
@@ -209,7 +209,7 @@ class DatePickerI18n {
     }
 
     List<String> fullWeeks = i18n.getWeeksFull();
-    if (fullWeeks != null && fullWeeks.isNotEmpty) {
+    if (fullWeeks.isNotEmpty) {
       return fullWeeks
           .map((item) => item.substring(0, min(3, item.length)))
           .toList();
